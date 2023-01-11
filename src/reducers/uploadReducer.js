@@ -23,7 +23,7 @@ export default function userReducer(state = defaultState, action) {
       case REMOVE_UPLOAD_FILE:
          return {
             ...state,
-            files: [...state.files.filter((file) => file.id !== action.payload)]
+            files: [...state.files.filter((file) => file.id != action.payload)]
          };
 
       case CHANGE_UPLOAD_FILE:

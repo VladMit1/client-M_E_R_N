@@ -18,10 +18,12 @@ const Navbar = () => {
    const dispatch = useDispatch();
    const [searchName, setSearchName] = useState('');
    const [searchTimeout, setSearchTimeout] = useState(false);
-   const avatar = currentUser.avatar
-      ? `${API_URL + currentUser.avatar}`
-      : avatarLogo;
-
+   const avatar =avatarLogo
+      
+      //currentUser.avatar
+      //? `${API_URL + '/static/' + currentUser.avatar}`
+      //   : avatarLogo;
+   
    const searchChangeHandler = (e) => {
       setSearchName(e.target.value);
       searchTimeout && clearTimeout(searchTimeout);
