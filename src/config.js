@@ -1,5 +1,5 @@
-const url = `https://localhost:5000`;
+const url = `http://localhost:5000`;
 const urlLocal = `https://cloud-disk-server.onrender.com`;
 
-export const API_URL = urlLocal;
+export const API_URL = url;
 //https://cloud-disk-server.onrender.com

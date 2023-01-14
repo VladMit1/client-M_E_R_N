@@ -4,10 +4,13 @@ import { setUser } from '../reducers/userReduce';
 
 export const registration = async (email, password) => {
    try {
-      const res = await axios.post(`${API_URL}/api/auth/registration`, {
-         email,
-         password
-      });
+      const res = await axios.post(
+         `${API_URL}/api/auth/registration`,
+         {
+            email,
+            password
+         }
+      );
       alert(res.data.message);
    } catch (error) {
       alert(error.response.data.message);
@@ -28,11 +31,12 @@ export const login = (email, password) => {
       }
    };
 };
-
 export const auth = () => {
    return async (dispatch) => {
       try {
-         const response = await axios.get(`${API_URL}/api/auth/auth`, {
+         const response = await axios.get(`${API_URL}/api/auth/auth`,
+
+            {
             headers: {
                Authorization: `Bearer ${localStorage.getItem('token')}`
             }
