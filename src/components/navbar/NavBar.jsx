@@ -10,6 +10,7 @@ import { getFiles, searchFiles } from '../../actions/file';
 import { showLoader } from '../../reducers/appReducer';
 import avatarLogo from '../../assets/img/avatar.svg';
 import { API_URL } from '../../config';
+import Profile from '../profile/Profile';
 
 const Navbar = () => {
    const isAuth = useSelector((state) => state.user.isAuth);
@@ -22,6 +23,11 @@ const Navbar = () => {
       ? `${API_URL + '/' + currentUser.avatar}`
       : avatarLogo;
 
+   const [changeAvatar, setChangeAvatar] = useState(false);
+
+   const cangeAva = () => {
+      setChangeAvatar((current) => !current);
+   };
    const searchChangeHandler = (e) => {
       setSearchName(e.target.value);
       searchTimeout && clearTimeout(searchTimeout);
@@ -49,15 +55,7 @@ const Navbar = () => {
             <div className="container">
                <img src={Logo} alt="" className="navbar__logo" />
                <div className="navbar__header">New Cloud</div>
-               {isAuth && (
-                  <input
-                     value={searchName}
-                     onChange={(e) => searchChangeHandler(e)}
-                     type="text"
-                     placeholder="Search"
-                     className="navbar__search"
-                  ></input>
-               )}
+
                {!isAuth && (
                   <>
                      <Link className="navbar__login" to="/login">
@@ -78,11 +76,26 @@ const Navbar = () => {
                   </Link>
                )}
                {isAuth && (
-                  <Link to="/profile">
-                     <img src={avatar} alt="" className="navbar__avatar" />
-                  </Link>
+                  <div className="navbar__profile">
+                     <img
+                        src={avatar}
+                        alt=""
+                        className="navbar__avatar"
+                        onClick={() => cangeAva()}
+                     ></img>
+                     {changeAvatar && <Profile></Profile>}
+                  </div>
                )}
             </div>
+            {isAuth && (
+               <input
+                  value={searchName}
+                  onChange={(e) => searchChangeHandler(e)}
+                  type="text"
+                  placeholder="Search"
+                  className="navbar__search"
+               ></input>
+            )}
          </div>
 
          <div className="wrap">{!isAuth ? <Outlet /> : <Disk />}</div>

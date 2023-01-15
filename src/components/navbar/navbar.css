@@ -1,31 +1,40 @@
 .navbar {
-  display: flex;
-  height: 50px;
-  justify-content: center;
-  background-color: white;
-  width: 100%;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: grid;
+}
+.navbar__logo {
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
 .navbar__header {
-  margin-left: 10px;
+  grid-column-start: 2;
+  grid-column-end: 3;
   font-size: 24px;
   font-weight: 700;
+  white-space: nowrap;
 }
 .navbar__login {
-  margin-left: auto;
-  margin-right: 20px;
+  grid-column-start: 3;
+  grid-column-end: 4;
   cursor: pointer;
 }
+.navbar__registration {
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
 .navbar__search {
+  grid-column-start: 1;
+  grid-row-start: 2;
   width: 200px;
   margin-left: 30px;
+}
+.navbar__profile {
+  grid-column-start: 4;
+  grid-column-end: 5;
 }
 .navbar__avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-}
-.container {
-  width: 1140px;
-  display: flex;
-  align-items: center;
 }
