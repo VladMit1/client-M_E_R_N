@@ -41,14 +41,14 @@ export const File = ({ fileView, file }) => {
                   className="file__btn file__download"
                   onClick={(e) => downloadClickHandler(e)}
                >
-                  Download file
+                 
                </button>
             )}
             <button
                onClick={(e) => deleteClickHandler(e)}
                className="file__btn file__delete"
             >
-               Delete file
+               
             </button>
          </div>
       )) ||

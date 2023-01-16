@@ -18,6 +18,7 @@
 .disk__btns {
   display: flex;
   align-items: center;
+  margin: 0 10px;
 }
 .disk__create {
   margin-left: 10px;
@@ -27,12 +28,13 @@
 }
 .disk__upload-label {
   border: 2px dashed #566885;
-  padding: 5px 10px;
+  padding: 2px 5px;
   cursor: pointer;
   margin-left: 10px;
 }
 .disk__select {
   margin-left: auto;
+  padding: 3px;
 }
 .disk__list,
 .disk__plate {
@@ -52,14 +54,14 @@
   background-image: url('../../assets/img/plate.svg');
 }
 .drop-area {
-  width: 100%;
-  height: calc(100vh - 50px - 40px);
+  height: 100%;
   margin: 20px;
   border: dashed #566885 2px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
+  font-size: 30px;
+  white-space: nowrap;
 }
 .popup {
   height: 100vh;

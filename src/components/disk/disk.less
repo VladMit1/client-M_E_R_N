@@ -20,6 +20,7 @@
    &__btns {
       display: flex;
       align-items: center;
+      margin: 0 10px;
    }
 
    &__create {
@@ -32,12 +33,13 @@
 
    &__upload-label {
       border: 2px dashed @font-color;
-      padding: 5px 10px;
+      padding: 2px 5px;
       cursor: pointer;
       margin-left: 10px;
    }
    &__select {
       margin-left: auto;
+      padding: 3px;
    }
    &__list,
    &__plate {
@@ -59,14 +61,14 @@
 }
 
 .drop-area {
-   width: 100%;
-   height: calc(100vh - 50px - 40px);
+   height: 100%;
    margin: 20px;
    border: dashed @font-color 2px;
    display: flex;
    justify-content: center;
    align-items: center;
-   font-size: 40px;
+   font-size: 30px;
+   white-space: nowrap;
 }
 
 .popup {

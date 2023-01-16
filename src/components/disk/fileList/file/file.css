@@ -10,31 +10,53 @@
 }
 .file__img {
   justify-self: center;
+  margin: 5px;
+  height: 40px;
+}
+.file__name {
+  max-width: 50px;
+  font-size: 12px;
 }
 .file__date {
-  grid-column-start: 5;
+  font-size: 12px;
+  grid-column-start: 4;
+  grid-column-end: 6;
   justify-self: center;
+  margin: 0 5px;
+  white-space: nowrap;
 }
 .file__size {
   grid-column-start: 6;
   justify-self: center;
+  font-size: 12px;
 }
 .file__btn {
   display: none;
 }
 .file:hover .file__date {
-  grid-column-start: 3;
+  display: none;
 }
 .file:hover .file__size {
-  grid-column-start: 4;
+  display: none;
 }
 .file:hover .file__download {
-  grid-column-start: 5;
+  background: url('../../../../assets/download.svg') no-repeat center;
+  grid-column-start: 4;
+  grid-column-end: 6;
+  justify-self: center;
   display: block;
+  height: 30px;
+  width: 30px;
+  border: none;
 }
 .file:hover .file__delete {
+  background: url('../../../../assets/delete.svg') no-repeat center;
   grid-column-start: 6;
   display: block;
+  justify-self: center;
+  height: 20px;
+  width: 20px;
+  border: none;
 }
 .file-plate {
   width: 150px;

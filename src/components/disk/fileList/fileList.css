@@ -1,5 +1,5 @@
 .filelist {
-  margin: 20px 0;
+  margin: 20px 10px;
 }
 .filelist__header {
   display: grid;
@@ -9,7 +9,8 @@
   grid-column-start: 2;
 }
 .filelist__date {
-  grid-column-start: 5;
+  grid-column-start: 4;
+  grid-column-end: 6;
   justify-self: center;
 }
 .filelist__size {
